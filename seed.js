@@ -17,12 +17,6 @@ name in the environment files.
 
 */
 
-    person = {
-        name: 'Jessica Park',
-        spotifyHandle: 'justparked',
-        twitterHandle: 'jparkin'
-    }
-
 var mongoose = require('mongoose');
 var Promise = require('bluebird');
 var chalk = require('chalk');

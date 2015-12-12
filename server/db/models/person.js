@@ -9,28 +9,4 @@ var schema = new mongoose.Schema({
     tweets: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Tweet' }]
 });
 
-var schema = new mongoose.Schema({
-    email: {
-        type: String
-    },
-    password: {
-        type: String
-    },
-    salt: {
-        type: String
-    },
-    twitter: {
-        id: String,
-        username: String,
-        token: String,
-        tokenSecret: String
-    },
-    facebook: {
-        id: String
-    },
-    google: {
-        id: String
-    }
-});
-
 mongoose.model('Person', schema);
