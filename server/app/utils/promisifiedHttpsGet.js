@@ -1,4 +1,4 @@
-var http = require('https');
+var https = require('https');
 var Promise = require('bluebird');
 
 function promisifiedHttpsGet(url) {
