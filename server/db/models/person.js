@@ -3,10 +3,10 @@ var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
     name: { type: String, required: true },
-    songs: [mongoose.Schema.Types.ObjectId, ref:'Song'],
+    songs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Song' }],
     spotifyHandle: { type: String, required: true },
     twitterHandle: { type: String, required: true },
-    tweets: [mongoose.Schema.Types.ObjectId, ref:'Tweet']
+    tweets: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Tweet' }]
 });
 
 var schema = new mongoose.Schema({
