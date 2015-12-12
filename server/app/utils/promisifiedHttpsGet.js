@@ -1,19 +1,40 @@
 var https = require('https');
+var http = require('http');
 var Promise = require('bluebird');
 
-function promisifiedHttpsGet(url) {
+function promisifiedHttpsGet(options) {
     return new Promise(function(resolve, reject) {
-        https.get(url, function(res) {
+        console.log(1)
+        https.get(options, function(res) {
             var body = '';
-            res.on('data', function() {
+            res.on('data', function(data) {
                 body += data;
             });
             res.on('end', function() {
-                resolve(body);
+                return resolve(body);
             })
             res.on('error', reject);
-        })
+        }).end()
     });
 }
 
-module.exports = promisifiedHttpsGet;
+
+function promisifiedHttpGet(url) {
+    return new Promise(function(resolve, reject) {
+        http.get(url, function(res) {
+            var body = '';
+            res.on('data', function(data) {
+                body += data;
+            });
+            res.on('end', function() {
+                return resolve(body);
+            })
+            res.on('error', reject);
+        }).end()
+    });
+}
+
+module.exports = {
+    promisifiedHttpsGet: promisifiedHttpsGet,
+    promisifiedHttpGet: promisifiedHttpGet
+}
