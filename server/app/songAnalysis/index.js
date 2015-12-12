@@ -91,11 +91,16 @@ function getTracks(playlistLink, username) {
             Promise.all(promisedTracks)
             .then(function resolve(tracks) {
             	console.log(tracks);
+            	console.log('\n\n\ntracks logged\n\n\n')
+            	// tracks = tracks.filter(function(song) { return !song.username });
 	            return Song.create(tracks)
 	        })
         	.then(function(songs){
         		console.log('Created ' + songs.length + 'songs.');
-			}).then(null, console.error)
+			}).then(null, function(err) {
+				console.error('You done messed up, but we\'ll take care of it');
+				return 1
+			})
     	})
 }
 
