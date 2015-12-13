@@ -9,7 +9,7 @@ var promisifiedHttpGet = require("../utils/promisifiedHttpsGet.js").promisifiedH
 var Song = require("mongoose").model("Song");
 var People = require("mongoose").model("Person");
 
-var bearerToken = "BQAZzhX_C2bLckBkz6v64jsHcmlv1uYbsKPKKlUxlVHFiG1Dbu07feIds73Mhx9Vm9kLMMnDH0kEpWKVxSAlz8IYEtDxv06CvP51Ak9wKx7SapDlf8oot-PemEkvJw3z6RNbqAZtmNfH59YWqRj6gdTGUIvuTQlMxtz-zOF5a-O1nqsfcl9e7xlQbwA7Lgi4pHDGyU2SeoB3_dW6is031sNa6LbSgHLci_t8ZF4LeBhajwJ6yF7fmRfXG1-gE7PEjHfUNcmLEmt0jH2MLoQjFRpIYoqi82mrjslcfNF507Ba4WW0GBA";
+var bearerToken = "BQDxWyRJJbtBNJQWyI8cIx1pR2po4ATpo5vJ_xcAAujw8UZPGHkoz_BI8k5by-l0FUux5g7E4tROWhd7Sps70mKWqG7UYNboJM1vcaRigtYe-EaZJaBIiOz3jCE2DeS6kIqqEHmrE0QyhtJhE-RsBuTQQR1GIhvpOzEB59khfSAESfmGSSyZe4umKeDctcPDPmbfZxc8aEBs0VbINIlndbzf1qIiotp4AGZ86vazVxtNDTNNWmzayRmKOyA-6BE28tK8cFTUK6D6VCIxOS7QOlIaNoCm1t7wD6bI";
 
 var usernames = []
 People.find()
