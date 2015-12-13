@@ -14,11 +14,11 @@ var bearerToken = "BQDxWyRJJbtBNJQWyI8cIx1pR2po4ATpo5vJ_xcAAujw8UZPGHkoz_BI8k5by
 var usernames = []
 People.find()
 	.then(function(people){
-		// people.forEach(function(person){
-		// 	usernames.push(person.spotifyHandle)
-		// })
+		people.forEach(function(person){
+			usernames.push(person.spotifyHandle)
+		})
 		// the next line should be usernames.forEach()
-		["ldt96"].forEach(function(username){
+		usernames.forEach(function(username){
 			getPlaylists(username)
 		})
 	}).then(null, console.error);
